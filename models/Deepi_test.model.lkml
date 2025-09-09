@@ -40,7 +40,7 @@ explore: users {
   always_filter: {
     filters: {
       field: users.state
-      value: " CA"
+      value: "Indiana"
     }
   }
 }
