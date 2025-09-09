@@ -37,6 +37,7 @@ explore: products {}
 
 explore: users {
   label: "Users with always Filter"
+  hidden: no
   always_filter: {
     filters: {
       field: users.state
