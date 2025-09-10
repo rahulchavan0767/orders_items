@@ -13,4 +13,3 @@ datagroup: always_filt_test_default_datagroup {
 }
 
 persist_with: always_filt_test_default_datagroup
-
