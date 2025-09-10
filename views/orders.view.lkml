@@ -6,6 +6,10 @@ view: orders {
     primary_key: yes
     type: number
     sql: ${TABLE}.id ;;
+    link: {
+      label: "URL"
+      url: "https://drive.google.com/corp/drive/folders/1BYj2HpYCaIVwCD8Ez0u-CJby0QZdNphs?lfhs=2"
+    }
   }
   dimension_group: created {
     type: time
@@ -20,6 +24,11 @@ view: orders {
     type: number
     # hidden: yes
     sql: ${TABLE}.user_id ;;
+    # link: {
+    #   label: "URL"
+    #   url: "https://drive.google.com/corp/drive/folders/1BYj2HpYCaIVwCD8Ez0u-CJby0QZdNphs?lfhs=2"
+    # }
+
   }
   measure: count {
     type: count
@@ -29,18 +38,18 @@ view: orders {
   # ----- Sets of fields for drilling ------
   set: detail {
     fields: [
-	id,
-	users.id,
-	users.first_name,
-	users.last_name,
-	billion_orders.count,
-	fakeorders.count,
-	hundred_million_orders.count,
-	hundred_million_orders_wide.count,
-	order_items.count,
-	order_items_vijaya.count,
-	ten_million_orders.count
-	]
+  id,
+  users.id,
+  users.first_name,
+  users.last_name,
+  billion_orders.count,
+  fakeorders.count,
+  hundred_million_orders.count,
+  hundred_million_orders_wide.count,
+  order_items.count,
+  order_items_vijaya.count,
+  ten_million_orders.count
+  ]
   }
 
 }
