@@ -80,7 +80,7 @@ explore: fatal_error_user_derived_base {}
 
 explore: flights {
   always_filter: {
-    filters: [flights.origin: "ATL"]
+    filters: [flights.carrier: "DL"]
   }
 }
 
