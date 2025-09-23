@@ -29,8 +29,10 @@ view: orders {
 
     type: string
 
-    sql: max(case when ${status}="complete" and
-      ${status}="pending" then ${DateTime} end);;
+  #  sql: max(case when ${status}="complete" and
+   #   ${users.country}="USA" then ${DateTime} end);;
+
+    sql: max(${TABLE}.created_at);;
 
     html: {{ rendered_value | date: _user_attributes['asdfghjkl'] }};;
 
