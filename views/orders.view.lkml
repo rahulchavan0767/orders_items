@@ -19,6 +19,27 @@ view: orders {
     timeframes: [raw, time, date, week, month, quarter, year]
     sql: ${TABLE}.created_at ;;
   }
+
+  dimension: DateTime {
+
+    type: date_time
+    convert_tz: no
+    sql:  ${TABLE}.created_at ;;
+    html: {{ rendered_value | date: _user_attributes['asdfghjkl'] }};;
+  }
+
+  measure: last_declaration_time {
+
+    type: string
+
+  #  sql: max(case when ${status}="complete" and
+   #   ${users.country}="USA" then ${DateTime} end);;
+
+    sql: max(${TABLE}.created_at);;
+
+    html: {{ rendered_value | date: _user_attributes['asdfghjkl'] }};;
+
+  }
   dimension: status {
     type: string
     sql: ${TABLE}.status ;;
