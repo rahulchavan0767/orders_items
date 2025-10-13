@@ -53,6 +53,19 @@ view: users {
     type: count
     drill_fields: [detail*]
   }
+  measure: gender_count {
+    type: count
+    # sql: ${TABLE}.gender ;;
+  }
+  measure: count_total {
+    type: number
+    value_format_name: percent_1
+    sql: 100.0 * ${gender_count} / ${count} ;;
+  }
+  # measure: count1 {
+  #   type: count
+  #   sql: ${gender_count} ;;
+  # }
 
   ### adding comments
 

@@ -39,4 +39,14 @@ view: products {
     type: count
     drill_fields: [id, item_name, inventory_items.count]
   }
+  measure: count1 {
+    type: count_distinct
+    sql: ${id} ;;
+
+  }
+  measure: product {
+    type: list
+    list_field: brand
+    html:href="//commons.wikimedia.org/wiki/User:Olaf_Simons" title="User:Olaf Simons">Olaf Simons</a> - <span class="int-own-work" lang="en">Own work</span>, <a href="https://creativecommons.org/licenses/by-sa/3.0" title="Creative Commons Attribution-Share Alike 3.0">CC BY-SA 3.0</a>, <a href="https://commons.wikimedia.org/w/index.php?curid=23746638">Link</a>  ;;
+  }
 }

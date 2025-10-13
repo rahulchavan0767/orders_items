@@ -8,7 +8,10 @@ view: orders {
     sql: ${TABLE}.id ;;
     link: {
       label: "URL"
-      url: "https://drive.google.com/corp/drive/folders/1BYj2HpYCaIVwCD8Ez0u-CJby0QZdNphs?lfhs=2"
+      # url: "https://drive.google.com/file/d/122Oe0FV0PPlHXjl2RQkdzTevzxII52XP/view?usp=sharing"
+      # url: "https://drive.google.com/corp/drive/folders/1BYj2HpYCaIVwCD8Ez0u-CJby0QZdNphs?lfhs=2"
+      # url: "https://drive.google.com/file/d/{{ value  }}/view?usp=sharing"
+      url: "https://drive.google.com/file/d/{{ value }}/view?usp=sharing"
     }
   }
   dimension_group: created {
@@ -26,7 +29,7 @@ view: orders {
     sql: ${TABLE}.user_id ;;
     # link: {
     #   label: "URL"
-    #   url: "https://drive.google.com/corp/drive/folders/1BYj2HpYCaIVwCD8Ez0u-CJby0QZdNphs?lfhs=2"
+    #   url: "https://drive.google.com/file/d/122Oe0FV0PPlHXjl2RQkdzTevzxII52XP/view?usp=sharing"
     # }
 
   }
