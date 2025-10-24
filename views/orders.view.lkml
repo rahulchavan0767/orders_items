@@ -43,6 +43,8 @@ view: orders {
   dimension: status {
     type: string
     sql: ${TABLE}.status ;;
+    suggest_explore: products
+    suggest_dimension: products.item_namesss
   }
   dimension: user_id {
     type: number
