@@ -30,4 +30,8 @@ view: order_items_vijaya {
     type: count
     drill_fields: [id, orders.id, inventory_items.id]
   }
+  measure: count1 {
+    type: number
+    sql: ${count}*120 ;;
+  }
 }
