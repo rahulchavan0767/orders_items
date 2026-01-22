@@ -58,7 +58,10 @@ view: orders {
   }
   measure: count {
     type: count
-    drill_fields: [detail*]
+    link: {
+      label: "Testing"
+      url: "/explore/thelook/orders?fields=orders.count"
+    }
   }
 
   # ----- Sets of fields for drilling ------
